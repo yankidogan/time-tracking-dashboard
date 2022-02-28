@@ -43,7 +43,7 @@ const DashboardElement = ({ elementData }) => {
                 <img src={iconToUse} alt="" />
             </div>
             <div className="element-body">
-                <div className="row">
+                <div className="row1">
                     <div className="element-title">
                         <h1>{elementData.title}</h1>
                     </div>
@@ -51,7 +51,7 @@ const DashboardElement = ({ elementData }) => {
                         <img src={ellipsisIcon} alt="options icon" />
                     </div>
                 </div>
-                <div className="row">
+                <div className="row2">
                     <div className="element-time">
                         <h2>{`${elementData.current}hrs`}</h2>
                     </div>
