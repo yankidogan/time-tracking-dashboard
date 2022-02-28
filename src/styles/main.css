@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+body {
+  background: #0f1424;
+  margin: 5em 2em;
+  font-family: 'Rubik';
+  text-align: center;
+}
+
+.report-section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #1c1f4a;
+  border-radius: 1em;
+}
+
+.report-section .container .report-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 1em;
+  background: #5847eb;
+  border-radius: 1em;
+  height: 5em;
+}
+
+.report-section .container .report-info .report-image img {
+  width: 60px;
+  border: solid 3px white;
+  border-radius: 50%;
+}
+
+.report-section .container .report-info .report-details {
+  text-align: left;
+}
+
+.report-section .container .report-info .report-details p {
+  font-size: 12px;
+  font-weight: 300;
+  color: #bdc1ff;
+}
+
+.report-section .container .report-info .report-details h1 {
+  font-size: 15px;
+  font-weight: 400;
+  color: white;
+}
+
+.report-section .container .report-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em 2.5em;
+}
+
+.report-section .container .report-filter button {
+  background: none;
+  border: none;
+  color: #bdc1ff;
+  font-weight: 300;
+}
+
+.report-section .container .report-filter button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.report-section .container .report-filter .selected {
+  color: white;
+}
+
+.element {
+  border-radius: 1em;
+  margin-top: 2em;
+}
+
+.element-header {
+  height: 3em;
+  overflow: hidden;
+  text-align: right;
+  padding: 0 1em;
+}
+
+.element-body {
+  background: #1c1f4a;
+  border-radius: 1em;
+  color: white;
+}
+
+.element-body:hover {
+  background: #6f76c8;
+  cursor: pointer;
+}
+
+.element-body .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2em;
+}
+
+.element-body h1 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.element-body h2 {
+  font-weight: 300;
+  font-size: 27px;
+}
+
+.element-body p {
+  font-weight: 300;
+  color: #bdc1ff;
+}
+
+.element-body img:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.work-element {
+  background: #ff8c66;
+}
+
+.play-element {
+  background: #56c2e6;
+}
+
+.study-element {
+  background: #ff5c7c;
+}
+
+.exercise-element {
+  background: #4acf81;
+}
+
+.social-element {
+  background: #7536d3;
+}
+
+.self-care-element {
+  background: #f1c65b;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,16 +1,17 @@
 import data from './data/data';
-import {useState} from 'react';
+import { useState } from 'react';
+import './styles/main.css';
 import ReportSection from './components/ReportSection';
 import DashboardElement from './components/DashboardElement';
 
 function App() {
-  
+
   const [timeframe, setTimeframe] = useState('weekly');
 
   let previousText = '';
-  switch(timeframe){
+  switch (timeframe) {
     case 'daily':
-      previousText = 'Last Day'
+      previousText = 'Yesterday'
       break;
     case 'monthly':
       previousText = 'Last Month'
@@ -21,7 +22,7 @@ function App() {
   }
 
   const filteredData = data.map(d => {
-    return({
+    return ({
       title: d.title,
       previous_text: previousText,
       current: d.timeframes[timeframe].current,
@@ -29,14 +30,14 @@ function App() {
     })
   });
 
-return(
-  <div className='main-container'>
-    <ReportSection setTimeframe={setTimeframe} />
-    {filteredData.map((f, i) => 
-      <DashboardElement key={i} elementData={f}/>
-    )}
-  </div>
-);
+  return (
+    <div className='main-container'>
+      <ReportSection timeframe={timeframe} setTimeframe={setTimeframe} />
+      {filteredData.map((f, i) =>
+        <DashboardElement key={i} elementData={f} />
+      )}
+    </div>
+  );
 
 }
 

@@ -6,12 +6,12 @@ import socialIcon from '../images/icon-social.svg';
 import studyIcon from '../images/icon-study.svg';
 import workIcon from '../images/icon-work.svg';
 
-const DashboardElement = ({elementData}) => {
+const DashboardElement = ({ elementData }) => {
 
     let iconToUse = workIcon;
     let classToUse = 'work-element';
 
-    switch(elementData.title){
+    switch (elementData.title) {
         case 'Exercise':
             iconToUse = exerciseIcon
             classToUse = 'exercise-element'
@@ -37,31 +37,30 @@ const DashboardElement = ({elementData}) => {
             classToUse = 'work-element';
     }
 
-
     return (
-        <div className={classToUse}>
-        <div className="element-header">
-            <img src={iconToUse} alt="" />
-        </div>
-        <div className="element-body">
-            <div className="row">
-                <div className="element-title">
-                    <h1>{elementData.title}</h1>
+        <div className={`element ${classToUse}`}>
+            <div className="element-header">
+                <img src={iconToUse} alt="" />
+            </div>
+            <div className="element-body">
+                <div className="row">
+                    <div className="element-title">
+                        <h1>{elementData.title}</h1>
+                    </div>
+                    <div className="element-options">
+                        <img src={ellipsisIcon} alt="options icon" />
+                    </div>
                 </div>
-                <div className="element-options">
-                    <img src={ellipsisIcon} alt="options icon" />
+                <div className="row">
+                    <div className="element-time">
+                        <h2>{`${elementData.current}hrs`}</h2>
+                    </div>
+                    <div className="element-stats">
+                        <p>{`${elementData.previous_text} - ${elementData.previous}`}</p>
+                    </div>
                 </div>
             </div>
-            <div className="row">
-                <div className="element-time">
-                    <h2>{elementData.current}</h2>
-                </div>
-                <div className="element-stats">
-                    <p>{`${elementData.previous_text} - ${elementData.previous}`}</p>
-                </div>
-            </div>
         </div>
-    </div>
     );
 }
 

@@ -1,5 +1,5 @@
 import jeremyImage from '../images/image-jeremy.png';
-const ReportSection = ({setTimeframe}) => {
+const ReportSection = ({timeframe, setTimeframe}) => {
     return (
         <div className="report-section">
         <div className="container">
@@ -13,9 +13,12 @@ const ReportSection = ({setTimeframe}) => {
                 </div>
             </div>
             <div className="report-filter">
-                <button onClick={() => setTimeframe('daily')}>Daily</button>
-                <button onClick={() => setTimeframe('weekly')}>Weekly</button>
-                <button onClick={() => setTimeframe('monthly')}>Monthly</button>
+                <button className={timeframe==='daily' ? 'selected' : null}
+                        onClick={() => setTimeframe('daily')}>Daily</button>
+                <button className={timeframe==='weekly' ? 'selected' : null}
+                        onClick={() => setTimeframe('weekly')}>Weekly</button>
+                <button className={timeframe==='monthly' ? 'selected' : null}
+                        onClick={() => setTimeframe('monthly')}>Monthly</button>
             </div>
         </div>
     </div>
