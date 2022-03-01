@@ -56,7 +56,7 @@ const DashboardElement = ({ elementData }) => {
                         <h2>{`${elementData.current}hrs`}</h2>
                     </div>
                     <div className="element-stats">
-                        <p>{`${elementData.previous_text} - ${elementData.previous}`}</p>
+                        <p>{`${elementData.previous_text} - ${elementData.previous}hrs`}</p>
                     </div>
                 </div>
             </div>
