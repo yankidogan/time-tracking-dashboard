@@ -2,6 +2,8 @@
 
 This is an implementation of the time tracking dashboard application described [here](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw).
 
+To view the page directly, you can use [this Github Pages link] (https://yankidogan.github.io/time-tracking-dashboard/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
