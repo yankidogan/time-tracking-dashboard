@@ -1,15 +1,14 @@
-import jeremyImage from '../images/image-jeremy.png';
-const ReportSection = ({timeframe, setTimeframe}) => {
+const ReportSection = ({timeframe, setTimeframe, currentData}) => {
     return (
         <div className="report-section">
         <div className="container">
             <div className="report-info">
                 <div className="report-image">
-                    <img src={jeremyImage} alt="" />
+                    <img src={currentData.pp_url} alt="" />
                 </div>
                 <div className="report-details">
                     <p>Report for</p>
-                    <h1>Jeremy Robson</h1>
+                    <h1>{currentData.name}</h1>
                 </div>
             </div>
             <div className="report-filter">
