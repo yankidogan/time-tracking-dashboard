@@ -2,7 +2,7 @@ const data = [
   {
     id: "1",
     name: "Jeremy Robson",
-    pp_url: "https://raw.githubusercontent.com/yankidogan/time-tracking-dashboard/main/src/images/image-jeremy.png",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-jeremy-robson.png",
     report_data: [
       {
         "title": "Work",
@@ -111,7 +111,7 @@ const data = [
   {
     id: "2",
     name: "Jeff Bezos",
-    pp_url: "https://m-cdn.phonearena.com/images/article/96463-1200/For-a-few-hours-today-Amazons-Jeff-Bezos-was-the-richest-man-in-the-world.jpg",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-jeff-bezos.jpg",
     report_data: [
       {
         "title": "Social",
@@ -220,7 +220,7 @@ const data = [
   {
     id: "3",
     name: "Bill Gates",
-    pp_url: "https://gef.stanford.edu/sites/g/files/sbiybj8206/f/styles/sm-square-profile/public/bill_gates-headshot-portrait-001_300x300.jpg?itok=yev_jOBn",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-bill-gates.jpg",
     report_data: [
       {
         "title": "Work",
@@ -329,7 +329,7 @@ const data = [
   {
     id: "4",
     name: "Warren Buffet",
-    pp_url: "https://qph.fs.quoracdn.net/main-qimg-54570c6cf3e4d0b6cc692214a82b8d75-lq",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-warren-buffet.jpg",
     report_data: [
       {
         "title": "Play",
@@ -438,7 +438,7 @@ const data = [
   {
     id: "5",
     name: "Larry Page",
-    pp_url: "https://images.spot.im/v1/production/irps2mzdenfq2qdi44ev",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-larry-page.jpg",
     report_data: [
       {
         "title": "Play",
@@ -547,7 +547,7 @@ const data = [
   {
     id: "6",
     name: "Larry Ellison",
-    pp_url: "https://www.enterprisetimes.co.uk/wp-content/uploads/2015/12/Larryy-Ellison-Executive-Chairman-of-the-Board-and-Chief-Technology-Officer.png",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-larry-ellison.png",
     report_data: [
       {
         "title": "Exercise",
@@ -656,7 +656,7 @@ const data = [
   {
     id: "7",
     name: "Sergey Brin",
-    pp_url: "https://www.marconisociety.org/wp-content/uploads/2020/10/Brin_sergey.jpg",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-sergey-brin.webp",
     report_data: [
       {
         "title": "Work",
@@ -765,7 +765,7 @@ const data = [
   {
     id: "8",
     name: "Mark Zuckerberg",
-    pp_url: "https://urodziny.sennik.biz//o/5/6/w250/56gb1gsllpsk.jpg",
+    pp_url: "https://time-tracking-dashboard-images.s3.eu-central-1.amazonaws.com/image-mark-zuckerberg.jpg",
     report_data: [
       {
         "title": "Play",
