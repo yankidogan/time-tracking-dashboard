@@ -2,7 +2,6 @@ const SelectUser = ({userData, currentReportId, setCurrentUserId}) => {
 
     const userChange = (event) => {
         const newUserId = event.target.value;
-        console.log({newUserId});
         setCurrentUserId(newUserId);
     }
 

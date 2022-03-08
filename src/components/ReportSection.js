@@ -1,5 +1,4 @@
 const ReportSection = ({timeframe, setTimeframe, currentUserData}) => {
-    console.log({currentUserData});
     return (
         <div className="report-section">
         <div className="container">

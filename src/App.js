@@ -6,40 +6,62 @@ import SelectUser from './components/SelectUser';
 import ReportSection from './components/ReportSection';
 import DashboardElement from './components/DashboardElement';
 import Loading from './components/Loading';
+import ErrorPrompt from './components/ErrorPrompt';
 
 function App() {
 
   const [currentUserId, setCurrentUserId] = useState('1');
   const [timeframe, setTimeframe] = useState('weekly');
   const [userData, setUserData] = useState([]);
-  const [reportData, setReportData] = useState([]);
+  const [reportData, setReportData] = useState([]); //I use this as a cache to keep the fetched data, to prevent re-fetching them everytime
+  const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     const fetchInitialData = async () => {
-      const fetchedUsers = await getUsers();
-      const fetchedReportData = await getReportData(currentUserId);
-      setUserData(fetchedUsers);
-      setReportData(reportData.concat(fetchedReportData));
+      try{
+        const fetchedUsers = await getUsers();
+        const fetchedReportData = await getReportData(currentUserId);
+        setUserData(fetchedUsers);
+        setReportData(reportData.concat(fetchedReportData));
+      }
+      catch(err) {
+        setErrorMessage(err.message);
+      }
     }
     fetchInitialData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     const fetchReportData = async (userId) => {
-      const fetchedReportData = await getReportData(userId);
-      setReportData(reportData.concat(fetchedReportData));
+      try{
+        const fetchedReportData = await getReportData(userId);
+        setReportData(reportData.concat(fetchedReportData));
+      }
+      catch (err) {
+        setErrorMessage(err.message);
+      }
     }
     const cachedIds = reportData.map(r => r.id);
     if(!cachedIds.includes(currentUserId)){
       fetchReportData(currentUserId);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUserId])
 
     const currentUserData = userData.find(u => u.id === currentUserId);
 
     const currentReportData = reportData.find(r => r.id === currentUserId);
 
-    if(currentUserData && currentReportData){
+    if(errorMessage) {
+      return (
+        <div className="dashboard-main">
+          <ErrorPrompt message={errorMessage} />
+        </div>
+      )
+    }
+
+    else if(currentUserData && currentReportData){
   
     let previousText = '';
     switch (timeframe) {

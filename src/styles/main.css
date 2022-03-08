@@ -48,6 +48,14 @@ body {
   }
 }
 
+.dashboard-main .error-prompt {
+  text-align: center;
+}
+
+.dashboard-main .error-prompt h1 {
+  color: #ff5c7c;
+}
+
 .dashboard-main .select-user {
   margin-bottom: 2em;
 }
@@ -60,6 +68,10 @@ body {
   width: 15em;
   height: 3em;
   font-size: 15px;
+}
+
+.dashboard-main .select-user .select-user-dropdown:hover {
+  cursor: pointer;
 }
 
 .dashboard-main .main-container .report-section .container {

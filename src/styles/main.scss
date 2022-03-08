@@ -9,6 +9,7 @@ body {
 
 .dashboard-main {
     margin: 5em 2em;
+
     .loading {
         position: absolute;
         left: 0;
@@ -29,6 +30,13 @@ body {
         100% {transform: rotate(360deg);}
     }
 
+    .error-prompt {
+        text-align: center;
+        h1 {
+            color: hsl(348, 100%, 68%);
+        }
+    }
+
     .select-user {
         margin-bottom: 2em;
         .select-user-dropdown {
@@ -39,8 +47,12 @@ body {
             width: 15em;
             height: 3em;
             font-size: 15px;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
+
     .main-container {
         .report-section {
             .container {
