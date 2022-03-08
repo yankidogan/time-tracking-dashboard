@@ -9,6 +9,26 @@ body {
 
 .dashboard-main {
     margin: 5em 2em;
+    .loading {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border: 16px solid hsl(235, 46%, 20%);
+        border-top: 16px solid hsl(246, 80%, 60%);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% {transform: rotate(0deg);}
+        100% {transform: rotate(360deg);}
+    }
+
     .select-user {
         margin-bottom: 2em;
         .select-user-dropdown {

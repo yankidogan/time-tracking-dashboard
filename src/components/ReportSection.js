@@ -1,14 +1,15 @@
-const ReportSection = ({timeframe, setTimeframe, currentData}) => {
+const ReportSection = ({timeframe, setTimeframe, currentUserData}) => {
+    console.log({currentUserData});
     return (
         <div className="report-section">
         <div className="container">
             <div className="report-info">
                 <div className="report-image">
-                    <img src={currentData.pp_url} alt="" />
+                    <img src={currentUserData.pp_url} alt="" />
                 </div>
                 <div className="report-details">
                     <p>Report for</p>
-                    <h1>{currentData.name}</h1>
+                    <h1>{currentUserData.user_name}</h1>
                 </div>
             </div>
             <div className="report-filter">
